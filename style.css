@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 90%;
+    margin: auto;
+    overflow: auto;
+}
+main{
+    display: grid;
+    grid-template-areas: "h h h"
+                          "n n n"
+                          "ar ar as"
+                          "f f f";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+header{
+    grid-area: h;
+    width: 100%;
+    color: rgb(36, 168, 168);
+    margin-left: 20px; margin-right: 20px;
+}
+
+nav{
+    grid-area: n;
+    width: 100%;
+    background-color:rgb(36, 168, 168);
+}
+
+article{
+    grid-area: ar;
+}
+.nagydiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 7px;
+}
+
+aside{
+    grid-area: as;
+    display: grid;
+    grid-template-columns: 330px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.menu li{
+    list-style: none;
+    display: inline-block;
+    margin: 4px;
+}
+a {
+    text-decoration: none;
+    color: white;
+    opacity: 50%;
+}
+.tarolo h1 {
+    width: 100%;
+    color:rgb(36, 168, 168);
+    background-color: whitesmoke;
+    padding-left: 15px;
+}
+.kep img {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid gray ;
+}
+.tarolo{
+    background-color: whitesmoke;
+    border:grey solid 1px;
+    width: 100%;
+}
+.taroloban{
+    margin-bottom: 20px;
+    background-color: white;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+}
+.taroloban p{
+    margin: 20px;
+}
+aside img{
+    width: 100%;
+    border: grey 1px solid;
+}
+.kep {
+    width: 100%;
+    align-content:center ;
+    padding-top: 20px; padding-left: 20px; padding-right: 20px;
+}
+footer{
+    text-align: center;
+    color:rgb(36, 168, 168);
+    grid-area: f;
+    
+}
+
+@media only screen and (max-width:600px){
+    body{
+        width:100%;
+    }
+    main{
+        display: grid;
+        grid-template-areas: "h"
+                              "n"
+                              "ar"
+                              "as"
+                              "f";
+        grid-template-columns: 1fr;
+    }
+    article{
+        margin-left: 0px; 
+        grid-template-columns: 1fr;
+    }
+    aside{
+        grid-template-columns: 1fr;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-left: 00px;
+    }
+
+}
+
